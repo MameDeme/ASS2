@@ -1,0 +1,28 @@
+<!--The content below is only a placeholder and can be replaced.-->
+  <div class="container">
+    <h4>Dog List</h4>
+
+
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Image</th>         
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let doge of dogs; index as i">
+          <th scope="row">{{ i + 1 }}</th>
+          <td> {{ doge.name }}</td>
+          <td>
+            <img src={{doge.picturePath}} class="mr-2" style="width: 100px">           
+          </td>
+          <td><img [src]="'assets/image/moredetails.jpg'" class="mr-2" style="width: 100px" routerLink="/details" routerLinkActive="active">  </td>
+        </tr>
+      </tbody>
+    </table>   
+
+  </div>
+
+<router-outlet></router-outlet>
